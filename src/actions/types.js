@@ -1,0 +1,1 @@
+export const TEXT_REDUX = 'TEXT_REDUX';
