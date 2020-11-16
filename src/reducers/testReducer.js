@@ -4,7 +4,7 @@ const initialState = {
     result:''
 }
 
-export default function (state = initialState, action) {
+export default function test(state = initialState, action) {
     switch(action.type){
         case TEXT_REDUX:
             return {

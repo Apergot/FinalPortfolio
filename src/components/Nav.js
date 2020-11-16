@@ -1,18 +1,19 @@
-import React, {useEffect} from 'react'
+import React, {Component} from 'react'
 import { NavLink } from 'react-router-dom';
 import '../styles/navbar.css';
-import Socials from './Socials';
+import ToggleMode from './ToggleMode';
 
-export default function Nav() {
+export default class Nav extends Component {
 
-    useEffect(() => {
+    componentDidMount(){
         const burguer = document.querySelector('.burguer');
         const nav = document.querySelector('.nav-links');
         const navLinks = document.querySelectorAll('.nav-links li');
 
         burguer.addEventListener('click', () => {
-
             nav.classList.toggle('nav-active');
+            
+            burguer.classList.toggle('toggle');
 
             navLinks.forEach((link, index) => {
                 if (link.style.animation) {
@@ -22,15 +23,15 @@ export default function Nav() {
                 }
             });
 
-            burguer.classList.toggle('toggle');
         });
-    })
+    }
 
-    return (
-        <nav>
-            <div className="logo">
-                <h4>Alejandro</h4>
-            </div>
+    render(){
+        return (
+            <nav id="navbar">
+                <div className="logo">
+                    <h4>Alejandro</h4>
+                </div>
                 <ul className="nav-links">
                     <li>
                         <NavLink to="/">Home</NavLink>
@@ -45,11 +46,16 @@ export default function Nav() {
                         <NavLink to="/about">OtherOne</NavLink>
                     </li>
                 </ul>
-            <div className="burguer">
-                <div className="line1"></div>
-                <div className="line2"></div>
-                <div className="line3"></div>
-            </div>
-        </nav>
-    )
+                <div className="icon-mode">
+                    <ToggleMode />
+                </div>
+                <div className="burguer">
+                    <div className="line1"></div>
+                    <div className="line2"></div>
+                    <div className="line3"></div>
+                </div>
+            </nav>
+        )
+    }
+    
 }

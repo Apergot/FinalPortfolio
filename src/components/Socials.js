@@ -1,12 +1,12 @@
 import React from 'react'
-import { FaTwitter, FaFacebook, FaGithub  } from 'react-icons/fa'
+import { FaTwitter, FaLinkedin, FaGithub  } from 'react-icons/fa'
 import '../styles/socials.css';
 
 function Socials() {
     return (
-        <div className="container">
+        <div className="socials">
             <FaTwitter/>
-            <FaFacebook />
+            <FaLinkedin />
             <FaGithub />
         </div>
     )
