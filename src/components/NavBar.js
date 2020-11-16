@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom';
-import { HiMenuAlt3 } from 'react-icons/hi'
 
-//mport ToggleMode from './ToggleMode';
+import ToggleMode from './ToggleMode';
 
 const showMenu = (toggleId, navId) => {
-    const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId)
+    const toggle = document.getElementById(toggleId);
+    const nav = document.getElementById(navId);
+    const burguer = document.querySelector('.burguer');
 
     if(toggle && nav){
         toggle.addEventListener('click', ()=>{
+            burguer.classList.toggle('toggle');
             nav.classList.toggle('show')
         })
     }
@@ -44,9 +45,13 @@ class nav2 extends Component {
                         </li>
                     </ul>
                 </div>
-
-                <div className="nav__toggle" id="nav-toggle">
-                    <HiMenuAlt3 className='bx bx-menu' />
+                <div className="navbar__icons">
+                    <ToggleMode />
+                    <div className="burguer nav__toggle" id="nav-toggle">
+                        <div className="line1"></div>
+                        <div className="line2"></div>
+                        <div className="line3"></div>
+                    </div>
                 </div>
             </nav>
         </header>

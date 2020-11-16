@@ -17,7 +17,7 @@ export default function ToggleMode() {
                 );
             }}
         >
-            {theme.mode === 'dark' ? <HiSun size={25}/> : <HiMoon size={25}/>}</Icon>)}
+            {theme.mode === 'dark' ? <HiSun size={30}/> : <HiMoon size={30}/>}</Icon>)}
         </ThemeConsumer>
     );
 }

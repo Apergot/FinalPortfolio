@@ -1,5 +1,5 @@
 import React from 'react'
-import heroImage from '../../assets/profile.png';
+import heroImage from '../../assets/profile.svg';
 import {FaLinkedin, FaGithub, FaTwitter} from 'react-icons/fa'
 
 export default function HomeSection() {
