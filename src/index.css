@@ -493,3 +493,9 @@ body::-webkit-scrollbar-thumb {
   border-radius: 0.5rem;
   color: #fff;
 }
+
+/* Under this must be deleted*/
+.prueba {
+  height: 100vh;
+  margin-top: 4rem;
+}

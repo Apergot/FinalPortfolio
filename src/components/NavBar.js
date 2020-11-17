@@ -35,9 +35,8 @@ class nav2 extends Component {
                             <NavLink exact activeClassName="active" to="/">Home</NavLink>
                         </li>
                         <li className="nav__item">
-                            <NavLink activeClassName="active" to="/about">About</NavLink>
+                            <NavLink activeClassName="active" to="/blog">Blog</NavLink>
                         </li>
-                        
                     </ul>
                 </div>
                 <div className="navbar__icons">
