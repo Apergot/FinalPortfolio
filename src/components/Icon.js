@@ -13,8 +13,8 @@ const getColor = style.variants('mode', 'variant', {
 });
 
 const Icon = styled.div`
-    color: ${getColor},
-    display: flex
+    color: ${getColor};
+    display: flex;
 `;
 
 export default Icon;
