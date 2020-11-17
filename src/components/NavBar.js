@@ -32,17 +32,12 @@ class nav2 extends Component {
                 <div className="nav__menu" id="nav-menu">
                     <ul className="nav__list">
                         <li className="nav__item">
-                            <NavLink to="/">Home</NavLink>
+                            <NavLink exact activeClassName="active" to="/">Home</NavLink>
                         </li>
                         <li className="nav__item">
-                            <NavLink to="/about">About</NavLink>
+                            <NavLink activeClassName="active" to="/about">About</NavLink>
                         </li>
-                        <li className="nav__item">
-                            <NavLink to="/about">Other</NavLink>
-                        </li>
-                        <li className="nav__item">
-                            <NavLink to="/about">OtherOne</NavLink>
-                        </li>
+                        
                     </ul>
                 </div>
                 <div className="navbar__icons">
