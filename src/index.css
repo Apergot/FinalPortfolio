@@ -310,6 +310,10 @@ img{
   padding-bottom: 2em;
 }
 
+textarea {
+  resize: none;
+}
+
 .contact__input{
   width: 100%;
   font-size: var(--normal-font-size);
@@ -319,13 +323,14 @@ img{
   outline: none;
   margin-bottom: var(--mb-4);
 }
+
 .contact__button{
   display: block;
   border: none;
   outline: none;
   font-size: var(--normal-font-size);
   cursor: pointer;
-  margin-left: auto;
+  margin-left: 33%;
 }
 
 input:focus::placeholder {
@@ -434,6 +439,10 @@ input:focus::placeholder {
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     text-align: initial;
+  }
+
+  .contact__button {
+    margin-left: auto;
   }
 
 }
