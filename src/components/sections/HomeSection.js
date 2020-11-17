@@ -7,7 +7,7 @@ export default function HomeSection() {
         <section className="home bd-grid" id="home">
             <div className="home__data">
                 <h1 className="home__title">Hi,<br></br>I'm <span className="home__title-color">Alejandro</span><br></br> Software Engineer</h1>
-                <a href="/" className="button">Contact</a>
+                <a href="#contact" className="button">Contact</a>
             </div>
 
             <div className="home__social">

@@ -69,6 +69,7 @@ ul{
 a{
   text-decoration: none;
   text-decoration-style: none;
+  color: inherit;
 }
 img{
   max-width: 100%;
@@ -102,6 +103,11 @@ img{
 }
 
 /*===== LAYOUT =====*/
+
+.svgicon{
+  /*filter:  brightness(0) invert(1);*/
+}
+
 .bd-grid{
   max-width: 1024px;
   display: grid;
@@ -117,7 +123,6 @@ img{
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
   box-shadow: 0 1px 4px rgba(146,161,176,.15);
 }
 
@@ -143,6 +148,7 @@ img{
 }
 .nav__item{
   margin-bottom: var(--mb-4);
+  color: #fff;
 }
 .nav__link{
   position: relative;
@@ -156,10 +162,6 @@ img{
   align-items: center;
 }
 
-.navbar__icons a {
-  margin: 0;
-  padding: 0;
-}
 
 .nav__link:hover{
   position: relative;
@@ -172,9 +174,6 @@ img{
   left: 0;
   top: 2rem;
   background-color: var(--first-color);
-}
-.nav__logo{
-  color: var(--second-color);
 }
 .nav__toggle{
   color: var(--second-color);
@@ -251,6 +250,58 @@ img{
 .about__img img{
   width: 200px;
   border-radius: .5rem;
+}
+
+/* ===== Skills =====*/
+
+.flex-grid{
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+}
+
+.skill {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 1.2rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.svgicon {
+  max-width: 30%;
+  margin-right: 1rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skill__title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.badges__container{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.badge {
+  margin: 0.1rem 0.1rem;
+  border-radius: 1em;
+  padding: 0 0.5rem;
+  text-align: center;
+  background: var(--first-color);
+  color: #fefefe;
 }
 
 /* ===== CONTACT =====*/
@@ -363,17 +414,25 @@ img{
   .about__img img{
     width: 300px;
   }
-  /* .contact__form{
-    width: 360px;
-  } */
+
+  .flex-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .skill{
+    width: 50%;
+  }
+
+
   .contact__container{
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     text-align: initial;
   }
-  /* .contact__img img {
-    width: 300px;
-  } */
+
 }
 
 @media screen and (min-width: 1024px){
@@ -414,4 +473,11 @@ body::-webkit-scrollbar-thumb {
 .toggle .line3 {
 
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.active {
+  padding: 0.4rem;
+  background-color: #4070F4;
+  border-radius: 0.5rem;
+  color: #fff;
 }
