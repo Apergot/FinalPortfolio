@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import storage from 'local-storage-fallback';
 
-const useTheme = (defaultTheme={mode:'dark'}) => {
+const useTheme = (defaultTheme={mode:'light'}) => {
 
     const [theme, _setTheme] = useState(getInitialTheme)
 

@@ -2,8 +2,7 @@ import React, {useState} from 'react'
 import emailjs from 'emailjs-com';
 import mailIlustration from '../../assets/contact.svg'
 import Swal from 'sweetalert2';
-import LoadingOverlay from 'react-loading-overlay';
-import BounceLoader from 'react-spinners/BounceLoader'
+import BounceLoader from 'react-spinners/DotLoader'
 
 const ContactSection = () => {
 
@@ -18,10 +17,10 @@ const ContactSection = () => {
     function sendEmail(e){
         e.preventDefault();
         setSending(true);
-        clearInputs();
         emailjs.sendForm('service_mgng1bs', 'contact_form', e.target, 'user_80a1D6stjrVHsuEUgISE4')
         .then((result) => {
             setSending(false);
+            clearInputs();
             Swal.fire({
                 icon: 'success', 
                 title: 'Mail sent successfully!', 
@@ -51,14 +50,14 @@ const ContactSection = () => {
                 <div className="contact__img">
                     <img src={mailIlustration} alt=""/>
                 </div>
-                <LoadingOverlay active={sending} spinner={<BounceLoader />}>
                 <form className="contact__form">
                     <input type="text" placeholder="Name" name="user_name" className="contact__input" id="nameForm" required/>
                     <input type="mail" placeholder="Email" name="user_email" className="contact__input" id="mailForm" required/>
                     <textarea name="message" cols="0" rows="10" className="contact__input" id="descForm" required></textarea>
-                    <input type="submit" value="Send" className="contact__button button"/>
+                    <div className="button__contact_container">
+                        <button type="submit" className="contact__button button">{sending ? <BounceLoader size={20} color={'#fff'}/> : 'Send'}</button>
+                    </div>
                 </form>
-                </LoadingOverlay>
             </div>
         </section>
     )
