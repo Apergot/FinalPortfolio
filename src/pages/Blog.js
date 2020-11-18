@@ -4,9 +4,11 @@ import PostList from '../components/postlist';
 
 export default function Blog() {
     return (
-        <main className="l-main prueba">
-            <p>This is the blog component</p>
-            <PostList />
+        <main>
+            <section className="blog section">
+                <h2 className="section-title"> My Blog Posts</h2>
+                    <PostList />
+            </section>
         </main>
     )
 }

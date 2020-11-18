@@ -104,8 +104,10 @@ img{
 
 /*===== LAYOUT =====*/
 
-.svgicon{
-  /*filter:  brightness(0) invert(1);*/
+.bd-flex {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .bd-grid{
@@ -117,6 +119,12 @@ img{
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
 }
+
+.bd-flex{
+  display: flex;
+  flex-direction: column;
+}
+
 .l-header{
   width: 100%;
   position: fixed;
@@ -181,6 +189,16 @@ img{
   cursor: pointer;
 }
 
+.active::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.18rem;
+  left: 0;
+  top: 2rem;
+  background-color: var(--first-color);
+}
+
 /*=== Show menu ===*/
 .show{
   right: 0;
@@ -188,11 +206,16 @@ img{
 
 /*===== HOME =====*/
 
-.home{
+.home {
   height: calc(100vh - 3rem);
   row-gap: 1rem;
-  padding-top: 0s;
 }
+
+.blog {
+  min-height: calc(100vh);
+}
+
+
 .home__data{
   align-self: center;
 }
@@ -232,6 +255,17 @@ img{
   font-weight: var(--font-semi);
   border-radius: .5rem;
 }
+
+.blog-button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: .5rem 1rem;
+  margin-top: 0.5rem;
+  font-weight: var(--font-semi);
+  border-radius: .5rem;
+}
+
 .button:hover{
   box-shadow: 0 10px 36px rgba(0,0,0,.15);
 }
@@ -337,6 +371,22 @@ input:focus::placeholder {
   color: transparent;
 }
 
+/* ===== BLOG ===== */
+
+.post-card {
+  padding: 2rem 0;
+  width: 90%;
+}
+
+.post {
+  width: 90%;
+}
+
+.post h1,h2,h3 {
+  margin: 0.5rem 0;
+}
+
+
 /* ===== FOOTER =====*/
 .footer{
   background-color: var(--second-color);
@@ -344,6 +394,7 @@ input:focus::placeholder {
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
+  position: relative;
 }
 .footer__title{
   font-size: 1.5rem;
@@ -396,6 +447,7 @@ input:focus::placeholder {
   .home{
     height: 100vh;
   }
+
   .home__data{
     align-self: flex-end;
   }
@@ -445,6 +497,15 @@ input:focus::placeholder {
     margin-left: auto;
   }
 
+  .post-card {
+    padding: 2rem 0;
+    width: 35%;
+  }
+  
+  .post {
+    width: 50%;
+    margin-top: 4rem;
+  }
 }
 
 @media screen and (min-width: 1024px){
@@ -487,15 +548,3 @@ body::-webkit-scrollbar-thumb {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-.active {
-  padding: 0.4rem;
-  background-color: #4070F4;
-  border-radius: 0.5rem;
-  color: #fff;
-}
-
-/* Under this must be deleted*/
-.prueba {
-  height: 100vh;
-  margin-top: 4rem;
-}

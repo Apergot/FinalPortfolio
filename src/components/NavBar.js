@@ -16,10 +16,22 @@ const showMenu = (toggleId, navId) => {
     }
 }
 
+const linkAction = () => {
+  const burguer = document.querySelector('.burguer');
+  const navMenu = document.getElementById('nav-menu');
+  burguer.classList.toggle('toggle');
+  navMenu.classList.remove('show');
+}
+
 class nav2 extends Component {
 
     componentDidMount(){
         showMenu('nav-toggle','nav-menu');
+        const navLink = document.querySelectorAll('.nav__link');
+        navLink.forEach(n => n.addEventListener('click', () => {
+            console.log('Me estas pulsando bro');
+            linkAction();
+        })); 
     }
 
     render() {
@@ -32,10 +44,10 @@ class nav2 extends Component {
                 <div className="nav__menu" id="nav-menu">
                     <ul className="nav__list">
                         <li className="nav__item">
-                            <NavLink exact activeClassName="active" to="/">Home</NavLink>
+                            <NavLink exact activeClassName="active" className="nav__link" to="/">Home</NavLink>
                         </li>
                         <li className="nav__item">
-                            <NavLink activeClassName="active" to="/blog">Blog</NavLink>
+                            <NavLink activeClassName="active" className="nav__link" to="/blog">Blog</NavLink>
                         </li>
                     </ul>
                 </div>
