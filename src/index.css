@@ -160,7 +160,6 @@ img{
 }
 .nav__link{
   position: relative;
-  color: #fff;
 }
 
 .navbar__icons {
@@ -247,6 +246,10 @@ img{
 }
 
 /*BUTTONS*/
+button {
+  --webkit-appearance: none;
+}
+
 .button{
   display: inline-block;
   background-color: var(--first-color);
@@ -358,13 +361,17 @@ textarea {
   margin-bottom: var(--mb-4);
 }
 
+.button__contact_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .contact__button{
-  display: block;
   border: none;
   outline: none;
   font-size: var(--normal-font-size);
   cursor: pointer;
-  margin-left: 33%;
 }
 
 input:focus::placeholder {
@@ -493,9 +500,6 @@ input:focus::placeholder {
     text-align: initial;
   }
 
-  .contact__button {
-    margin-left: auto;
-  }
 
   .post-card {
     padding: 2rem 0;

@@ -43,7 +43,7 @@ const getBackground = style('mode', {
   }
 
   @media screen and (min-width: 768px){
-    .nav__item {
+    .nav__link{
       color: ${props => 
       props.theme.mode === 'dark' ? '#fff' : '#111'}
     }

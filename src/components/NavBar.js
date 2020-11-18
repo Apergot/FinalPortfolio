@@ -17,10 +17,12 @@ const showMenu = (toggleId, navId) => {
 }
 
 const linkAction = () => {
-  const burguer = document.querySelector('.burguer');
-  const navMenu = document.getElementById('nav-menu');
-  burguer.classList.toggle('toggle');
-  navMenu.classList.remove('show');
+    const burguer = document.querySelector('.burguer');
+    const navMenu = document.getElementById('nav-menu');
+    if (burguer.classList.contains('toggle')) {
+        burguer.classList.toggle('toggle');
+    }
+    navMenu.classList.remove('show');
 }
 
 class nav2 extends Component {
