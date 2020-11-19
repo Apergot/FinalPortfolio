@@ -31,7 +31,6 @@ class nav2 extends Component {
         showMenu('nav-toggle','nav-menu');
         const navLink = document.querySelectorAll('.nav__link');
         navLink.forEach(n => n.addEventListener('click', () => {
-            console.log('Me estas pulsando bro');
             linkAction();
         })); 
     }

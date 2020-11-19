@@ -9,15 +9,13 @@ const ContactSection = () => {
     const [sending, setSending] = useState(false);
 
     function clearInputs () {
-        document.getElementById('nameForm').placeholder = 'Name';
-        document.getElementById('mailForm').placeholder = 'Email';
-        document.getElementById('descForm').placeholder = '';
+        document.getElementById('contactForm').reset();
     }
 
     function sendEmail(e){
         e.preventDefault();
         setSending(true);
-        emailjs.sendForm(process.env.REACT_APP_API_EMAILJS_ID, process.env.REACT_APP_API_EMAILJS_TEMPLATE, e.target, process.env.REACT_APP_API_EMAILJS_USERID)
+        emailjs.sendForm(process.env.REACT_APP_API_EMAILJS_ID, '', e.target, process.env.REACT_APP_API_EMAILJS_USERID)
         .then((result) => {
             setSending(false);
             clearInputs();
@@ -46,11 +44,12 @@ const ContactSection = () => {
     return (
         <section className="contact section" id="contact">
             <h2 className="section-title">Contact</h2>
+            <p className="section-subtitle">If you want to get in touch, talk about a project or just to say hi, don't hesitate to contact me using below form either.</p>
             <div className="contact__container bd-grid" onSubmit={sendEmail}>
                 <div className="contact__img">
                     <img src={mailIlustration} alt=""/>
                 </div>
-                <form className="contact__form">
+                <form className="contact__form" id="contactForm">
                     <input type="text" placeholder="Name" name="user_name" className="contact__input" id="nameForm" required/>
                     <input type="mail" placeholder="Email" name="user_email" className="contact__input" id="mailForm" required/>
                     <textarea name="message" cols="0" rows="10" className="contact__input" id="descForm" required></textarea>

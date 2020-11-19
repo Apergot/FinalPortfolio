@@ -1,6 +1,7 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
 import Markdown from 'react-markdown'
+import gfm from 'remark-gfm'
 
 import postsList  from '../posts.json';
 
@@ -35,7 +36,7 @@ const post = (props) => {
                         <br />
                         <small>{fetchedPost.author}</small>
                         <hr/>
-                        <Markdown children={fetchedPost.content}/>
+                        <Markdown children={fetchedPost.content} plugins={[gfm]}/>
                     </div>
                 </div>
             </section>
