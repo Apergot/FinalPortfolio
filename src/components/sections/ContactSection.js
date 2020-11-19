@@ -17,7 +17,7 @@ const ContactSection = () => {
     function sendEmail(e){
         e.preventDefault();
         setSending(true);
-        emailjs.sendForm('service_mgng1bs', 'contact_form', e.target, 'user_80a1D6stjrVHsuEUgISE4')
+        emailjs.sendForm(process.env.REACT_APP_API_EMAILJS_ID, process.env.REACT_APP_API_EMAILJS_TEMPLATE, e.target, process.env.REACT_APP_API_EMAILJS_USERID)
         .then((result) => {
             setSending(false);
             clearInputs();

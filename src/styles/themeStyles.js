@@ -42,6 +42,23 @@ const getBackground = style('mode', {
     props.theme.mode === 'dark' ? '#fff' : '#111'}
   }
 
+  .blog__post {
+    background-color: ${props => 
+    props.theme.mode === 'dark' ? '#1E1E1E' : '#fff'}
+  }
+
+  .blog__post__date span {
+    color: ${props => 
+    props.theme.mode === 'dark' ? '#fff' : 'rgba(0, 0, 0, .5)'}
+  }
+
+  .blog__post__img::before{
+    background: ${props => 
+    props.theme.mode === 'dark' ?
+    'linear-gradient(to right, rgba(18,18,18,.8) 0%, rgba(0,0,0,.8) 100%);':
+    'linear-gradient(to right, rgba(79, 172, 254, .8),rgba(0, 242, 254, .8) 100%)'}
+  }
+
   @media screen and (min-width: 768px){
     .nav__link{
       color: ${props => 

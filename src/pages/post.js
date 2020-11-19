@@ -27,7 +27,7 @@ const post = (props) => {
     }
     return (
         <div>
-            <section className="blog section">
+            <section className="blog">
                 <div className="bd-flex">
                     <div className="post">
                         <h2>{fetchedPost.title}</h2>

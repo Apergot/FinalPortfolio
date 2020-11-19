@@ -107,7 +107,11 @@ img{
 .bd-flex {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100%;
+  width: 100%;
+  padding: 0 1.5rem;
+
 }
 
 .bd-grid{
@@ -379,11 +383,6 @@ input:focus::placeholder {
 }
 
 /* ===== BLOG ===== */
-
-.post-card {
-  padding: 2rem 0;
-  width: 90%;
-}
 
 .post {
   width: 90%;

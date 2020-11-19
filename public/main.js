@@ -47,6 +47,7 @@ const getPosts = () => {
                     author: metadata.author ? metadata.author : 'No author given',
                     date: metadata.date ? metadata.date : 'No date given',
                     desc: metadata.desc ? metadata.desc : 'No desc given',
+                    img: metadata.img ? metadata.img : 'No img given',
                     content : content ? content: 'No content given',
                 }
                 postsList.push(post);
