@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import testReducer from './testReducer'
+import certsReducer from './certsReducer'
 
 export default combineReducers({
-    word: testReducer
+    certs: certsReducer
 });

@@ -1,1 +1,1 @@
-export const TEXT_REDUX = 'TEXT_REDUX';
+export const RETRIEVE_ALL_CERTS = 'RETRIEVE_ALL_CERTS';
