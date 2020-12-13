@@ -42,6 +42,11 @@ const getBackground = style('mode', {
     props.theme.mode === 'dark' ? '#fff' : '#111'}
   }
 
+  .box{
+    background-color: ${props => 
+    props.theme.mode === 'dark' ? '#0E2431' : '#e1e1e1'}
+  }
+
   .blog__post {
     background-color: ${props => 
     props.theme.mode === 'dark' ? '#1E1E1E' : '#fff'}

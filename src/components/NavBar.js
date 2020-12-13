@@ -51,7 +51,7 @@ class nav2 extends Component {
                             <NavLink activeClassName="active" className="nav__link" to="/blog">Blog</NavLink>
                         </li>
                         <li className="nav__item">
-                            <NavLink activeClassName="active" className="nav__link" to="/certs">Certs</NavLink>
+                            <NavLink activeClassName="active" className="nav__link" to="/certs">Education</NavLink>
                         </li>
                     </ul>
                 </div>

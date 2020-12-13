@@ -1,7 +1,7 @@
 import { RETRIEVE_ALL_CERTS } from '../actions/types';
 
 const initialState = {
-    list:[]
+    list: null
 }
 
 export default function certs(state = initialState, action) {

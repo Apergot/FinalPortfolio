@@ -8,11 +8,9 @@ export const retrieveAllCerts = () => dispatch => {
         headers: myHeaders,
         redirect: 'follow'
     }
-    fetch('http://portfolioapi-env.eba-xegfa6hp.eu-west-2.elasticbeanstalk.com/api/certs', requestOptions)
+    fetch(process.env.REACT_APP_API_LINK_CERTS, requestOptions)
     .then(res => res.json())
-    .then(result => console.log(result))
     .then(data => {
-        console.log('esto es data', data);
         dispatch({
             type: RETRIEVE_ALL_CERTS,
             payload: data
