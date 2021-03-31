@@ -8,7 +8,6 @@ import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
 import Post from './pages/post';
-import Certs from './pages/Certs';
 import NotFound from './pages/notfound';
 
 const Routes = () => {
@@ -21,7 +20,6 @@ const Routes = () => {
                     <Route exact path="/" component={Home} />
                     <Route exact path="/blog" component={Blog}/>
                     <Route exact path="/blog/:id" render={props => <Post {...props}/>}/>
-                    <Route exact path="/certs" component={Certs}/>
                     <Route path="/404" component={NotFound}/>
                     <Route component={NotFound} />
                 </Switch>
