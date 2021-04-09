@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import certsReducer from './certsReducer'
+import postsReducer from './postReducer';
 
 export default combineReducers({
-    certs: certsReducer
+    posts: postsReducer
 });

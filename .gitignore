@@ -2,6 +2,9 @@
 
 # dependencies
 /node_modules
+/perdoblog/node_modules
+/perdoblog/sanity.json
+/src/client.js
 /.pnp
 .pnp.js
 

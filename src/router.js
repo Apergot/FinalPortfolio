@@ -19,7 +19,7 @@ const Routes = () => {
                 <Switch>
                     <Route exact path="/" component={Home} />
                     <Route exact path="/blog" component={Blog}/>
-                    <Route exact path="/blog/:id" render={props => <Post {...props}/>}/>
+                    <Route exact path="/blog/:slug" render={(props) => <Post {...props}/>}/>
                     <Route path="/404" component={NotFound}/>
                     <Route component={NotFound} />
                 </Switch>
