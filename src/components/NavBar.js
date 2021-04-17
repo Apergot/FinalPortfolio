@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom';
-
+//import { NavLink } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import ToggleMode from './ToggleMode';
 
 const showMenu = (toggleId, navId) => {
@@ -40,15 +40,18 @@ class nav2 extends Component {
             <header className="l-header">
             <nav className="nav bd-grid">
                 <div>
-                    <a href="/" className="nav__logo">Alejandro Perdomo</a>
+                    <a href="/" className="nav__logo">Alejandro Perdomo (WIP)</a>
                 </div>
                 <div className="nav__menu" id="nav-menu">
                     <ul className="nav__list">
                         <li className="nav__item">
-                            <NavLink exact activeClassName="active" className="nav__link" to="/">Home</NavLink>
+                            <Link exact activeClassName="active" className="nav__link" to="/#about">About</Link>
                         </li>
                         <li className="nav__item">
-                            <NavLink activeClassName="active" className="nav__link" to="/blog">Blog</NavLink>
+                            <Link activeClassName="active" className="nav__link" to="/#contact">Contact</Link>
+                        </li>
+                        <li className="nav__item">
+                            <Link activeClassName="active" className="nav__link" to="/#skills">Skills</Link>
                         </li>
                     </ul>
                 </div>

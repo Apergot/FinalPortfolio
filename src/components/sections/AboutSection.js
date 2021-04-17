@@ -14,7 +14,7 @@ export default function AboutSection() {
                     <div>
                         <h2 className="about__subtitle">Alejandro Perdomo González</h2>
                         <p className="about__text">
-                            Hi there, I'm Alejandro - I'm currently working on my end of degree project and learning everything 
+                            Hi there, I'm Alejandro - I'm a software engineer currently looking for a job and learning everything 
                             I can about software developement. For now, I am mainly focused on everything related to web and mobile
                             development. Here are some things I'm good at:
                         </p>

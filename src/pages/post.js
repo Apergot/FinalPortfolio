@@ -5,7 +5,9 @@ const post = (props) => {
 
     const {slug} = props.match.params;
     const currentPost = props.posts.find((element) => {
-        if (element.slug.current === slug) return element;
+        if (element.slug.current === slug) {
+            return element
+        }
     });
     
     return (

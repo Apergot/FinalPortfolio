@@ -6,8 +6,9 @@ import ScrollToTop from './components/ScrollToTop';
 
 //Page imports
 import Home from './pages/Home';
+/*
 import Blog from './pages/Blog';
-import Post from './pages/post';
+import Post from './pages/post';*/
 import NotFound from './pages/notfound';
 
 const Routes = () => {
@@ -18,8 +19,8 @@ const Routes = () => {
                 <NavBar />
                 <Switch>
                     <Route exact path="/" component={Home} />
-                    <Route exact path="/blog" component={Blog}/>
-                    <Route exact path="/blog/:slug" render={(props) => <Post {...props}/>}/>
+                    {/**<Route exact path="/blog" component={Blog}/>
+                    <Route exact path="/blog/:slug" render={(props) => <Post {...props}/>}/>*/}
                     <Route path="/404" component={NotFound}/>
                     <Route component={NotFound} />
                 </Switch>
