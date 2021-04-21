@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/postslist.css'
 import {connect} from 'react-redux'
@@ -8,6 +8,9 @@ import {retrieveAllPosts} from '../redux/actions/postActions';
 
 const PostList = (props) => {
 
+        useEffect(() => {
+            props.retrieveAllPosts();
+        }, [])
 
         return (
                 <div className="bd-flex">
@@ -22,12 +25,12 @@ const PostList = (props) => {
                                         <span>{post.publishedAt}</span>
                                     </div>
                                     <h1 className="blog__post__title">{post.title}</h1>
-                                    <p className="blog__post__text">{post.desc}</p>
+                                    <p className="blog__post__text">{`${post.body[0].children[0].text.split(" ").splice(0, 16).join(" ")}...`}</p>
                                     <Link to={`/blog/${post.slug.current}`} className="blog__post__cta" data={post}>Read more</Link>
                                 </div>
                             </div>
                         )
-                    }) : <div><p>que pasa</p></div>}
+                    }) : <div><p>No blog posts found</p></div>}
                 </div>
         );
 }

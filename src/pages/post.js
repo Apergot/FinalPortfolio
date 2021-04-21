@@ -1,12 +1,16 @@
 import React from 'react'
+import {Redirect} from 'react-router-dom'
 import { connect } from "react-redux";
 
 const post = (props) => {
+    if (props.posts == null) {
+        return <Redirect to='/blog'/>;
+    }
 
     const {slug} = props.match.params;
     const currentPost = props.posts.find((element) => {
         if (element.slug.current === slug) {
-            return element
+            return element;
         }
     });
     

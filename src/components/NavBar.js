@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-//import { NavLink } from 'react-router-dom';
-import { HashLink as Link } from 'react-router-hash-link';
+import { NavLink } from 'react-router-dom';
+import { NavHashLink as Link } from 'react-router-hash-link';
 import ToggleMode from './ToggleMode';
 
 const showMenu = (toggleId, navId) => {
@@ -45,13 +45,16 @@ class nav2 extends Component {
                 <div className="nav__menu" id="nav-menu">
                     <ul className="nav__list">
                         <li className="nav__item">
-                            <Link exact activeClassName="active" className="nav__link" to="/#about">About</Link>
+                            <Link activeClassName="active" className="nav__link" to="/#about">About</Link>
+                        </li>
+                        <li className="nav__item">
+                            <Link activeClassName="active" className="nav__link" to="/#skills">Skills</Link>
                         </li>
                         <li className="nav__item">
                             <Link activeClassName="active" className="nav__link" to="/#contact">Contact</Link>
                         </li>
                         <li className="nav__item">
-                            <Link activeClassName="active" className="nav__link" to="/#skills">Skills</Link>
+                            <NavLink activeClassName="active" className="nav__link" to="/blog">Blog</NavLink>
                         </li>
                     </ul>
                 </div>
