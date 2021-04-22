@@ -40,10 +40,13 @@ class nav2 extends Component {
             <header className="l-header">
             <nav className="nav bd-grid">
                 <div>
-                    <a href="/" className="nav__logo">Alejandro Perdomo (WIP)</a>
+                    <a href="/" className="nav__logo">Alejandro Perdomo</a>
                 </div>
                 <div className="nav__menu" id="nav-menu">
                     <ul className="nav__list">
+                        <li className="nav__item">
+                            <Link activeClassName="active" className="nav__link" to="/#home">Home</Link>
+                        </li>
                         <li className="nav__item">
                             <Link activeClassName="active" className="nav__link" to="/#about">About</Link>
                         </li>

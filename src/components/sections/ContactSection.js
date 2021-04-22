@@ -52,7 +52,7 @@ const ContactSection = () => {
                 <form className="contact__form" id="contactForm">
                     <input type="text" placeholder="Name" name="user_name" className="contact__input" id="nameForm" required/>
                     <input type="mail" placeholder="Email" name="user_email" className="contact__input" id="mailForm" required/>
-                    <textarea name="message" cols="0" rows="10" className="contact__input" id="descForm" required></textarea>
+                    <textarea name="message" cols="0" rows="10" className="contact__input" id="descForm" placeholder="Describe your needs here" required></textarea>
                     <div className="button__contact_container">
                         <button type="submit" className="contact__button button">{sending ? <BounceLoader size={20} color={'#fff'}/> : 'Send'}</button>
                     </div>

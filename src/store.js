@@ -11,8 +11,8 @@ const store = createStore(
     initialState,
     //when in production avoid devtools, it causes blank page on mobile browsers
     compose(
-        applyMiddleware(...middleware),
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+        applyMiddleware(...middleware)/*,
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()*/
     )
 );
 
